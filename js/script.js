@@ -2,7 +2,7 @@
 let nombreUsuario = "";
 let contadorPredicciones = 0;
 
-const RESPUESTAS_ORACULO = [
+const respuestasOraculo = [
   // --- Respuestas de la categoría AMOR
   {
     id: 1,
@@ -188,7 +188,7 @@ const RESPUESTAS_ORACULO = [
   },
 ];
 
-const CATEGORIAS_PREDICCION = [
+const categoriasPrediccion = [
   "Amor",
   "Dinero",
   "Suerte",
@@ -215,8 +215,8 @@ function generarMensajeMenuCategorias() {
   let mensaje = `¡${nombreUsuario}, el Oráculo espera tu pregunta!\n\n`;
   mensaje +=
     "Primero, elige la categoría de tu curiosidad (ingresa el número):\n\n";
-  for (let i = 0; i < CATEGORIAS_PREDICCION.length; i++) {
-    mensaje += `${i + 1}. ${CATEGORIAS_PREDICCION[i]}\n`;
+  for (let i = 0; i < categoriasPrediccion.length; i++) {
+    mensaje += `${i + 1}. ${categoriasPrediccion[i]}\n`;
   }
   mensaje +=
     "\nO escribe la categoría que te interese (ej: 'trabajo', 'familia', 'salud'):";
@@ -237,18 +237,18 @@ function procesarEleccionCategoria(eleccion) {
   if (
     !isNaN(indiceNumericoCategoria) &&
     indiceNumericoCategoria >= 0 &&
-    indiceNumericoCategoria < CATEGORIAS_PREDICCION.length
+    indiceNumericoCategoria < categoriasPrediccion.length
   ) {
     categoriaSeleccionada =
-      CATEGORIAS_PREDICCION[indiceNumericoCategoria].toLowerCase();
+      categoriasPrediccion[indiceNumericoCategoria].toLowerCase();
     if (categoriaSeleccionada.includes("general")) {
       categoriaSeleccionada = "general";
     }
     alert(
-      `Has elegido una predicción de tipo: ${CATEGORIAS_PREDICCION[indiceNumericoCategoria]}.`
+      `Has elegido una predicción de tipo: ${categoriasPrediccion[indiceNumericoCategoria]}.`
     );
     preguntaEspecificaUsuario = prompt(
-      `Ahora, ${nombreUsuario}, haz tu pregunta específica sobre ${CATEGORIAS_PREDICCION[indiceNumericoCategoria]} (ej: '¿tendré suerte en el amor?', '¿cambiaré de trabajo?') o simplemente presiona Enter para una revelación misteriosa:`
+      `Ahora, ${nombreUsuario}, haz tu pregunta específica sobre ${categoriasPrediccion[indiceNumericoCategoria]} (ej: '¿tendré suerte en el amor?', '¿cambiaré de trabajo?') o simplemente presiona Enter para una revelación misteriosa:`
     );
 
     if (preguntaEspecificaUsuario === null) {
@@ -303,7 +303,7 @@ function procesarEleccionCategoria(eleccion) {
 function generarPrediccion(categoria) {
   let prediccionElegida = "";
 
-  const respuestasFiltradas = RESPUESTAS_ORACULO.filter(
+  const respuestasFiltradas = respuestasOraculo.filter(
     (respuesta) => respuesta.tipo === categoria
   );
 
@@ -319,7 +319,7 @@ function generarPrediccion(categoria) {
     console.warn(
       `No se encontraron predicciones específicas para '${categoria}'. Se genera una predicción general.`
     );
-    const respuestasGenerales = RESPUESTAS_ORACULO.filter(
+    const respuestasGenerales = respuestasOraculo.filter(
       (respuesta) => respuesta.tipo === "general"
     );
     const indiceAleatorioGeneral = Math.floor(
@@ -344,14 +344,12 @@ function mostrarResultadoFinal(mensajePrediccion) {
 function iniciarOraculo() {
   const nombreInicial = obtenerNombreUsuario();
 
-  // Si el usuario cancela, el juego termina
   if (nombreInicial === null) {
     alert("¡Entendido! El Oráculo respeta tu privacidad. ¡Hasta la próxima!");
     console.log("Simulador terminado por el usuario al inicio.");
     return;
   }
 
-  // Si el usuario dio un nombre (o si acepta se le asigna usuario anónimo)
   nombreUsuario = nombreInicial;
   alert(
     `¡Un gusto conocerte, ${nombreUsuario}! Prepárate para las verdades del destino.`
@@ -359,7 +357,6 @@ function iniciarOraculo() {
 
   let continuarPrediciendo = true;
 
-  // Ciclo principal del simulador para múltiples predicciones
   while (continuarPrediciendo) {
     let mensajeMenu = generarMensajeMenuCategorias();
     let eleccionCategoriaUsuario = prompt(mensajeMenu);

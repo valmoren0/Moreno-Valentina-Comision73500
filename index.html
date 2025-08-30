@@ -3,19 +3,60 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Oráculo de la Prosperidad Dudosamente Precisa</title>
+    <title>El Oráculo de la Prosperidad Dudosamente Precisa</title>
+    <link rel="stylesheet" href="css/styles.css" />
   </head>
   <body>
-    <h1>¡Bienvenido al Oráculo de la Prosperidad Dudosamente Precisa!</h1>
-    <p>
-      ¿Cansado de la incertidumbre? ¿Harto de las verdades a medias? ¡Has
-      llegado al lugar correcto! Este es un <strong> Oráculo </strong> que te
-      dará predicciones sobre finanzas, amor, o la que se te ocurra... Con la
-      garantía de ser <i> dudosamente precisa</i> y, por qué no, un poco
-      sarcástica. Acá podrás plantearle al destino las preguntas más
-      trascendentales (o las más ridículas) y recibir una respuesta directa,
-      inesperada y, quizás, dolorosamente honesta.
-    </p>
+    <nav class="navbar">
+      <a href="index.html" class="nav-item">Oráculo Principal</a>
+      <a href="pages/preguntas.html" class="nav-item">Haz una Pregunta</a>
+    </nav>
+
+    <div class="main-content">
+      <!-- Contenedor de bienvenida -->
+      <div id="bienvenida-container" class="container bienvenida-container">
+        <h1 class="titulo">
+          Bienvenido al Oráculo de la Prosperidad Dudosamente Precisa
+        </h1>
+        <p class="subtitulo">¿Cuál es tu nombre, buscador de verdades?</p>
+        <form id="nombreForm">
+          <input type="text" id="nombreInput" placeholder="Ingresa tu nombre" />
+          <button type="submit" class="btn">Entrar al Oráculo</button>
+        </form>
+      </div>
+
+      <!-- Contenedor del Oráculo -->
+      <div id="oraculo-container" class="container oraculo-container">
+        <header>
+          <h1 id="tituloBienvenida" class="titulo"></h1>
+          <p class="subtitulo">
+            ¿Qué misterio del destino quieres revelar hoy?
+          </p>
+          <button id="cambiarNombreBtn" class="link-btn">
+            Cambiar de Nombre
+          </button>
+        </header>
+
+        <main>
+          <section class="seccion-prediccion">
+            <h2 class="titulo-seccion">Elige una categoría</h2>
+            <div id="categoriasContainer" class="contenedor-botones"></div>
+
+            <button id="generarBtn" class="btn">Generar Predicción</button>
+
+            <div id="resultadoPrediccion" class="resultado"></div>
+          </section>
+
+          <section class="seccion-historial">
+            <h2 class="titulo-seccion">Historial de Predicciones</h2>
+            <div id="historialContainer" class="historial"></div>
+            <button id="limpiarHistorialBtn" class="btn">
+              Limpiar Historial
+            </button>
+          </section>
+        </main>
+      </div>
+    </div>
 
     <script src="js/script.js"></script>
   </body>

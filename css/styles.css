@@ -1,0 +1,233 @@
+/* Estilos generales para el cuerpo y los elementos */
+body {
+  background-color: #0d0124;
+  color: #e2eafc;
+  font-family: "Georgia", serif;
+  margin: 0;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Estilos de la barra de navegación */
+.navbar {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 15px 0;
+  background-color: #1c0e33;
+  border-bottom: 1px solid #4a148c;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+.nav-item {
+  color: #ffd700;
+  text-decoration: none;
+  font-size: 1.2em;
+  font-weight: bold;
+  padding: 8px 15px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  border-radius: 5px;
+}
+
+.nav-item:hover {
+  background-color: #4a148c;
+  color: #e2eafc;
+}
+
+/* Contenedor principal */
+.main-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+  padding: 20px;
+}
+
+.container {
+  background: #2c1042;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5), 0 0 10px #f0e68c;
+  border: 1px solid #4a148c;
+  max-width: 500px;
+  width: 90%;
+}
+
+.titulo {
+  font-family: "Arial", sans-serif;
+  color: #ffd700;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  margin-bottom: 5px;
+}
+
+.subtitulo {
+  font-style: italic;
+  color: #c0c0c0;
+  margin-top: 5px;
+}
+
+/* Estilos para los botones */
+.btn {
+  background-color: #5d259c;
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+  margin-bottom: 20px;
+}
+
+.btn:hover {
+  background-color: #7b3ebf;
+}
+
+.link-btn {
+  background: none;
+  color: #ffd700;
+  border: none;
+  cursor: pointer;
+  text-decoration: underline;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+/* Estilos de los contenedores */
+.bienvenida-container {
+  display: block;
+}
+
+.oraculo-container {
+  display: none;
+}
+
+body.nombre-ingresado .bienvenida-container {
+  display: none;
+}
+
+body.nombre-ingresado .oraculo-container {
+  display: block;
+}
+
+.contenedor-botones {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.categoria-btn {
+  padding: 10px 20px;
+  border: 2px solid #5d259c;
+  border-radius: 20px;
+  background-color: transparent;
+  color: #e2eafc;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 14px;
+}
+
+.categoria-btn:hover,
+.categoria-btn.activo {
+  background-color: #5d259c;
+  border-color: #ffd700;
+  color: white;
+}
+
+/* Estilos del resultado y el historial */
+.resultado {
+  background: #1c0e33;
+  padding: 20px;
+  border-radius: 8px;
+  border: 1px solid #4a148c;
+  margin-top: 20px;
+  font-style: italic;
+}
+
+.historial {
+  background: #1c0e33;
+  padding: 20px;
+  border-radius: 8px;
+  border: 1px solid #4a148c;
+  margin-top: 20px;
+  text-align: left;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.prediccion-item {
+  padding: 8px 0;
+  border-bottom: 1px dashed #4a148c;
+}
+
+.prediccion-item:last-child {
+  border-bottom: none;
+}
+
+/* Estilos para inputs del formulario */
+#nombreInput {
+  width: 80%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  border: 1px solid #4a148c;
+  background-color: #1c0e33;
+  color: #e2eafc;
+  text-align: center;
+}
+
+#limpiarHistorialBtn {
+  margin-top: 15px;
+}
+
+/* Estilos para la página de preguntas */
+.estetica-preguntas {
+  background-color: #0c1b2c;
+}
+
+.estetica-preguntas .container {
+  background: #1d2e46;
+  border: 1px solid #00aaff;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5), 0 0 10px #00aaff;
+}
+
+.estetica-preguntas .titulo {
+  color: #ffe64d;
+}
+
+.estetica-preguntas .subtitulo {
+  color: #d1e5ff;
+}
+
+.estetica-preguntas .btn {
+  background-color: #69cef9;
+  color: #1d2e46;
+  text-shadow: none;
+
+  .estetica-preguntas .btn:hover {
+    background-color: #ffe64d;
+  }
+
+  .estetica-preguntas .resultado {
+    background: #1d2e46;
+    color: #d1e5ff;
+    border: 1px solid #00aaff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3), 0 0 8px #00aaff;
+  }
+
+  .estetica-preguntas #preguntaInput {
+    border: 1px solid #e0c200;
+    background-color: #1d2e46;
+    color: #ffd700;
+  }
+
+  .estetica-preguntas #preguntaInput::placeholder {
+    color: #e0c200;
+  }
+}

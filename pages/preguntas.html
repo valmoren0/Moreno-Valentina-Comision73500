@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pregúntale al Oráculo</title>
+    <link rel="stylesheet" href="../css/styles.css" />
+  </head>
+  <body class="estetica-preguntas">
+    <nav class="navbar">
+      <a href="../index.html" class="nav-item">Oráculo Principal</a>
+      <a href="preguntas.html" class="nav-item">Haz una Pregunta</a>
+    </nav>
+
+    <div class="main-content">
+      <div class="container">
+        <h1 class="titulo">Hazle una pregunta al Oráculo</h1>
+        <p class="subtitulo">Formula una pregunta simple de "Sí" o "No".</p>
+        <form id="preguntaForm">
+          <input
+            type="text"
+            id="preguntaInput"
+            placeholder="Escribe tu pregunta..."
+            required
+          />
+          <button type="submit" class="btn">Obtener respuesta</button>
+        </form>
+        <div id="resultadoPregunta" class="resultado">
+          <p>Tu respuesta aparecerá aquí.</p>
+        </div>
+      </div>
+    </div>
+
+    <script src="../js/preguntas.js"></script>
+  </body>
+</html>

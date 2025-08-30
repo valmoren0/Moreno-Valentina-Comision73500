@@ -1,0 +1,399 @@
+{
+  "respuestas_oraculo": [
+    {
+      "id": 1,
+      "texto": "El amor te espera a la vuelta de la esquina. Pero recuerda, a veces la esquina está en otro continente.",
+      "tipo": "amor"
+    },
+    {
+      "id": 2,
+      "texto": "Prepara tu corazón para un flechazo inesperado.",
+      "tipo": "amor"
+    },
+    {
+      "id": 3,
+      "texto": "El amor está en el aire... y también el polen, cuidado con las alergias.",
+      "tipo": "amor"
+    },
+    {
+      "id": 4,
+      "texto": "Tus lazos afectivos se fortalecerán. Es un momento ideal para cultivar nuevas conexiones o reavivar viejas llamas.",
+      "tipo": "amor"
+    },
+    {
+      "id": 5,
+      "texto": "La química está garantizada... al menos en tu próximo experimento de limpieza.",
+      "tipo": "amor"
+    },
+    {
+      "id": 6,
+      "texto": "Un encuentro casual cambiará tu perspectiva sobre el romance. Mantén los ojos abiertos.",
+      "tipo": "amor"
+    },
+    {
+      "id": 7,
+      "texto": "Antes de amar a otros, ámate a ti mismo. Los astros te animan a un poco de egoísmo sano.",
+      "tipo": "amor"
+    },
+    {
+      "id": 8,
+      "texto": "El oráculo aconseja cautela, pero te anima a seguir tu corazón.",
+      "tipo": "amor"
+    },
+    {
+      "id": 9,
+      "texto": "La lealtad será tu mayor recompensa. Invierte tu energía en quienes realmente te valoran.",
+      "tipo": "amor"
+    },
+    {
+      "id": 10,
+      "texto": "El amor es como un buen café: a veces amargo, a veces dulce. El destino te servirá una taza inolvidable.",
+      "tipo": "amor"
+    },
+    {
+      "id": 11,
+      "texto": "Los hilos del destino amoroso se enredan, pero no te preocupes, se desenredarán con una buena comunicación.",
+      "tipo": "amor"
+    },
+    {
+      "id": 12,
+      "texto": "El oráculo te susurra que la paciencia con tu pareja es la clave para un amor duradero.",
+      "tipo": "amor"
+    },
+    {
+      "id": 13,
+      "texto": "Un viejo amor podría volver a tu vida, pero eso no significa que tengas que volver a abrir la puerta.",
+      "tipo": "amor"
+    },
+    {
+      "id": 14,
+      "texto": "A veces, la respuesta a tu soledad no está en otra persona, sino en el chocolate de la heladera.",
+      "tipo": "amor"
+    },
+    {
+      "id": 15,
+      "texto": "El amor verdadero te encontrará cuando estés menos preocupado por buscarlo.",
+      "tipo": "amor"
+    },
+    {
+      "id": 16,
+      "texto": "Tus finanzas crecerán tan rápido como tu lista de pendientes. ¡Felicidades!",
+      "tipo": "dinero"
+    },
+    {
+      "id": 17,
+      "texto": "Encontrarás una fuente inesperada de riqueza... en el bolsillo de un pantalón viejo.",
+      "tipo": "dinero"
+    },
+    {
+      "id": 18,
+      "texto": "Una corriente de prosperidad se acerca. Espera oportunidades financieras que superarán tus expectativas. ¡Es hora de invertir!",
+      "tipo": "dinero"
+    },
+    {
+      "id": 19,
+      "texto": "Pronto recibirás una suma importante. Probablemente sea la factura del mes pasado.",
+      "tipo": "dinero"
+    },
+    {
+      "id": 20,
+      "texto": "El flujo de la abundancia está a tu favor. Se acercan ganancias inesperadas o el éxito en proyectos que te traerán gran beneficio económico.",
+      "tipo": "dinero"
+    },
+    {
+      "id": 21,
+      "texto": "La prosperidad llama a tu puerta, viene en forma de nuevas ideas de negocio.",
+      "tipo": "dinero"
+    },
+    {
+      "id": 22,
+      "texto": "Un gasto inesperado podría convertirse en una inversión inteligente. Confía en tu intuición, pero no sin antes leer la letra pequeña.",
+      "tipo": "dinero"
+    },
+    {
+      "id": 23,
+      "texto": "Ahorrar es el nuevo oro. El oráculo te incita a guardar un poco para los días lluviosos.",
+      "tipo": "dinero"
+    },
+    {
+      "id": 24,
+      "texto": "La abundancia llega a quienes se atreven a pedirla. Es momento de renegociar ese sueldo o buscar un ascenso.",
+      "tipo": "dinero"
+    },
+    {
+      "id": 25,
+      "texto": "Tu futuro económico depende de una decisión que tomarás pronto. El oráculo no puede decirte cuál es, pero te susurra: ¡Pide consejo a un sabio!",
+      "tipo": "dinero"
+    },
+    {
+      "id": 26,
+      "texto": "Las finanzas son como el dominó. Un movimiento inteligente hoy puede generar una cadena de ganancias en el futuro.",
+      "tipo": "dinero"
+    },
+    {
+      "id": 27,
+      "texto": "El dinero no compra la felicidad, pero sí un helado. El oráculo te aconseja que priorices los pequeños placeres de la vida.",
+      "tipo": "dinero"
+    },
+    {
+      "id": 28,
+      "texto": "Se avecina una oportunidad de trabajo o un proyecto que te dará el dinero que necesitas.",
+      "tipo": "dinero"
+    },
+    {
+      "id": 29,
+      "texto": "Cuidado con los gastos impulsivos. El oráculo te dice que tu cuenta bancaria es más importante que esa oferta de última hora.",
+      "tipo": "dinero"
+    },
+    {
+      "id": 30,
+      "texto": "Una pequeña inversión te traerá grandes beneficios. No subestimes el poder de los pequeños pasos.",
+      "tipo": "dinero"
+    },
+    {
+      "id": 31,
+      "texto": "Tu suerte es como el Wi-Fi público: a veces funciona, a veces te deja colgado.",
+      "tipo": "suerte"
+    },
+    {
+      "id": 32,
+      "texto": "La rueda de la fortuna gira a tu favor. Hoy, las estrellas te sonríen, trayendo oportunidades únicas y resultados sorprendentemente positivos.",
+      "tipo": "suerte"
+    },
+    {
+      "id": 33,
+      "texto": "Un golpe de suerte está a la vuelta de la esquina. Prepárate para que las cosas salgan a tu favor de maneras que nunca imaginaste.",
+      "tipo": "suerte"
+    },
+    {
+      "id": 34,
+      "texto": "La fortuna te sonríe... o quizás solo tiene gases. Acepta el misterio.",
+      "tipo": "suerte"
+    },
+    {
+      "id": 35,
+      "texto": "Un golpe de suerte se avecina. Asegúrate de no estar durmiendo cuando pase.",
+      "tipo": "suerte"
+    },
+    {
+      "id": 36,
+      "texto": "Las coincidencias no existen. El oráculo te dice que la próxima que veas es tu gran oportunidad. No la dejes pasar.",
+      "tipo": "suerte"
+    },
+    {
+      "id": 37,
+      "texto": "Hoy, tu intuición estará afilada. Confía en tus corazonadas, te guiarán a un lugar afortunado.",
+      "tipo": "suerte"
+    },
+    {
+      "id": 38,
+      "texto": "Un favor inesperado te abrirá una puerta que creías cerrada para siempre. La suerte te sonríe.",
+      "tipo": "suerte"
+    },
+    {
+      "id": 39,
+      "texto": "La suerte es la oportunidad disfrazada. Un pequeño inconveniente te evitará un gran problema. ¡Festeja!",
+      "tipo": "suerte"
+    },
+    {
+      "id": 40,
+      "texto": "El azar te beneficia. Podrías encontrar un billete perdido o la respuesta a un viejo dilema.",
+      "tipo": "suerte"
+    },
+    {
+      "id": 41,
+      "texto": "No esperes a la suerte, sal a su encuentro. Las oportunidades están donde menos te lo esperas.",
+      "tipo": "suerte"
+    },
+    {
+      "id": 42,
+      "texto": "Un pequeño gesto de bondad te traerá un karma afortunado. La suerte está de tu lado.",
+      "tipo": "suerte"
+    },
+    {
+      "id": 43,
+      "texto": "Hoy, hasta los semáforos se pondrán en verde para ti. ¡Aprovecha la racha!",
+      "tipo": "suerte"
+    },
+    {
+      "id": 44,
+      "texto": "El oráculo te aconseja que apuestes por ti mismo. La suerte te seguirá.",
+      "tipo": "suerte"
+    },
+    {
+      "id": 45,
+      "texto": "Si crees en tu buena energía, te irá mejor. Tu suerte es el reflejo de tu actitud.",
+      "tipo": "suerte"
+    },
+    {
+      "id": 46,
+      "texto": "Los hilos del destino tejen un camino brillante. Una nueva dirección se abre, llena de posibilidades y logros inesperados que te llevarán lejos.",
+      "tipo": "destino"
+    },
+    {
+      "id": 47,
+      "texto": "El destino te sonríe... o quizás solo está practicando su cara de póker.",
+      "tipo": "destino"
+    },
+    {
+      "id": 48,
+      "texto": "Un nuevo camino se abre, pero probablemente solo sea la puerta de la nevera.",
+      "tipo": "destino"
+    },
+    {
+      "id": 49,
+      "texto": "Tu futuro es tan claro como el agua. Como la de un charco después de la lluvia.",
+      "tipo": "destino"
+    },
+    {
+      "id": 50,
+      "texto": "Tu camino se ilumina con claridad. Estás en la senda correcta hacia tus mayores aspiraciones, con el universo conspirando a tu favor.",
+      "tipo": "destino"
+    },
+    {
+      "id": 51,
+      "texto": "El destino es un libro con páginas en blanco. Tú eres quien escribe el próximo capítulo.",
+      "tipo": "destino"
+    },
+    {
+      "id": 52,
+      "texto": "Cada pequeño paso que des hoy te acercará a la versión de ti mismo que estás destinado a ser.",
+      "tipo": "destino"
+    },
+    {
+      "id": 53,
+      "texto": "El oráculo te revela que tu propósito es encontrar la paz interior",
+      "tipo": "destino"
+    },
+    {
+      "id": 54,
+      "texto": "Las decisiones de hoy moldearán tu mañana. Elige sabiamente, o al menos con una buena excusa.",
+      "tipo": "destino"
+    },
+    {
+      "id": 55,
+      "texto": "El destino te llama, pero a veces su voz es tan baja que suena como el despertador que ignoras.",
+      "tipo": "destino"
+    },
+    {
+      "id": 56,
+      "texto": "El universo te pide que sueltes el control. A veces, las mejores cosas suceden cuando menos lo esperas.",
+      "tipo": "destino"
+    },
+    {
+      "id": 57,
+      "texto": "Tu destino no es un punto en el mapa, es una dirección. Sigue tu corazón, él te guiará.",
+      "tipo": "destino"
+    },
+    {
+      "id": 58,
+      "texto": "Un cambio de planes inesperado te llevará a un lugar donde debías estar. Confía en el proceso.",
+      "tipo": "destino"
+    },
+    {
+      "id": 59,
+      "texto": "No hay errores, solo lecciones. Tu camino está lleno de ellas, y cada una te hace más fuerte.",
+      "tipo": "destino"
+    },
+    {
+      "id": 60,
+      "texto": "Tu destino está en tus manos. No dejes que el miedo te impida alcanzar tus sueños.",
+      "tipo": "destino"
+    },
+    {
+      "id": 61,
+      "texto": "El universo conspira a tu favor... o al menos, no en tu contra. Por ahora.",
+      "tipo": "general"
+    },
+    {
+      "id": 62,
+      "texto": "Se avecinan cambios. Podría ser el clima o tu opinión sobre el helado de menta.",
+      "tipo": "general"
+    },
+    {
+      "id": 63,
+      "texto": "Este año, tus sueños se harán realidad. Pero solo los que tengas mientras duermes.",
+      "tipo": "general"
+    },
+    {
+      "id": 64,
+      "texto": "Una ola de buena fortuna se extiende por tu camino. Prepará el café, porque el día te sorprenderá con noticias y oportunidades que alegrarán tu espíritu.",
+      "tipo": "general"
+    },
+    {
+      "id": 65,
+      "texto": "No te preocupes por el futuro, el pasado ya te ha dado suficiente material para memes.",
+      "tipo": "general"
+    },
+    {
+      "id": 66,
+      "texto": "El universo te guiña un ojo. Se avecina un período de crecimiento personal y descubrimientos inesperados que te llenarán de satisfacción.",
+      "tipo": "general"
+    },
+    {
+      "id": 67,
+      "texto": "Tu intuición te guiará, pero no te fíes si te dice que el último chocolate que comiste no tiene calorías.",
+      "tipo": "general"
+    },
+    {
+      "id": 68,
+      "texto": "Grandes revelaciones están por llegar, justo cuando pensabas que no podía ser más extraño.",
+      "tipo": "general"
+    },
+    {
+      "id": 69,
+      "texto": "Los astros predicen que hoy es un buen día para ser tú mismo. O para ser un pingüino, lo que te venga mejor.",
+      "tipo": "general"
+    },
+    {
+      "id": 70,
+      "texto": "Una verdad inesperada te hará replantearte lo que creías saber. No la rechaces; acéptala.",
+      "tipo": "general"
+    },
+    {
+      "id": 71,
+      "texto": "El oráculo te aconseja paciencia. Las cosas buenas llevan tiempo, y los trámites burocráticos aún más.",
+      "tipo": "general"
+    },
+    {
+      "id": 72,
+      "texto": "La claridad mental te llegará cuando menos lo esperes. Podría ser durante la ducha o mientras miras un documental de gatos.",
+      "tipo": "general"
+    },
+    {
+      "id": 73,
+      "texto": "Un viejo conocido reaparecerá con noticias importantes. Prepara el café y los oídos.",
+      "tipo": "general"
+    },
+    {
+      "id": 74,
+      "texto": "El futuro es incierto, pero tu capacidad para improvisar está fuera de toda duda. Confía en tu ingenio.",
+      "tipo": "general"
+    },
+    {
+      "id": 75,
+      "texto": "Habrá un momento de reflexión que cambiará tu perspectiva. Es hora de detenerse y mirar las estrellas.",
+      "tipo": "general"
+    },
+    {
+      "id": 76,
+      "texto": "El universo te pide que seas más flexible. Como un contorsionista, pero con tus planes.",
+      "tipo": "general"
+    },
+    {
+      "id": 77,
+      "texto": "Tu energía atraerá lo que necesitas. Ten cuidado con lo que deseas, porque podrías terminar con más tareas de las que pediste.",
+      "tipo": "general"
+    },
+    {
+      "id": 78,
+      "texto": "Hoy es un buen día para tomar un riesgo. A menos que el riesgo sea comer ese yogur que venció hace una semana.",
+      "tipo": "general"
+    },
+    {
+      "id": 79,
+      "texto": "Una pequeña acción de bondad que realices hoy, tendrá un gran eco en el universo.",
+      "tipo": "general"
+    }
+  ]
+}

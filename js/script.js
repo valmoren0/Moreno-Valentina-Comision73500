@@ -1,4 +1,8 @@
-// js script
+// js/script.js
+
+// ---------------------------------------------------------------------------------------------------------------------------------
+// VARIABLES Y CONSTANTES
+// ---------------------------------------------------------------------------------------------------------------------------------
 
 let respuestasOraculo = [];
 
@@ -27,12 +31,23 @@ const cambiarNombreBtn = document.getElementById("cambiarNombreBtn");
 let historialPredicciones =
   JSON.parse(localStorage.getItem("historialOraculo")) || [];
 
+// ---------------------------------------------------------------------------------------------------------------------------------
+// FUNCIONES
+// ---------------------------------------------------------------------------------------------------------------------------------
+
 const cargarRespuestasOraculo = async () => {
   try {
     const res = await fetch("json/respuestas_oraculo_general.json");
+    if (!res.ok) {
+      throw new Error(`Error en la carga HTTP! Estado: ${res.status}`);
+    }
     const data = await res.json();
     respuestasOraculo = data.respuestas_oraculo;
-  } catch (error) {}
+  } catch (error) {
+    console.error("Error al cargar los datos del oráculo:", error);
+    resultadoDiv.innerHTML =
+      "<p>Hubo un problema al cargar el oráculo. Intenta recargar la página.</p>";
+  }
 };
 
 const renderizarCategorias = () => {
@@ -53,13 +68,14 @@ const renderizarHistorial = () => {
     return `<div class="prediccion-item">
             <p><strong>Categoría:</strong> ${prediccion.categoria}</p>
             <p><strong>Predicción:</strong> ${prediccion.texto}</p>
+            <p class="fecha-historial">${prediccion.fecha}</p>
         </div>`;
   });
   historialContainer.innerHTML = historialHTML.join("");
 };
 
 const inicializarMensajePrediccion = () => {
-  resultadoDiv.innerHTML = `<p>Aún no has hecho una predicción. Elige una categoría y presiona "Generar Predicción".</p>`;
+  resultadoDiv.innerHTML = `<p>Elige una categoría y presiona "Generar Predicción".</p>`;
 };
 
 const generarYGuardarPrediccion = () => {
@@ -84,9 +100,32 @@ const generarYGuardarPrediccion = () => {
     JSON.stringify(historialPredicciones)
   );
   renderizarHistorial();
+
+  //Notificación de Toastify al guardar la predicción
+  mostrarNotificacion("Predicción guardada en tu historial.", "#3498db");
 };
 
-//Formulario de bienvenida
+const iniciarSimulador = () => {
+  const nombreUsuario = localStorage.getItem("nombreUsuario");
+  if (nombreUsuario) {
+    tituloBienvenida.textContent = `¡Hola, ${nombreUsuario}!`;
+    bienvenidaContainer.style.display = "none";
+    oraculoContainer.style.display = "block";
+    renderizarCategorias();
+    renderizarHistorial();
+    inicializarMensajePrediccion();
+  } else {
+    bienvenidaContainer.style.display = "block";
+    oraculoContainer.style.display = "none";
+    nombreInput.value = localStorage.getItem("nombreUsuario") || "";
+  }
+};
+
+// ---------------------------------------------------------------------------------------------------------------------------------
+// EVENTOS
+// ---------------------------------------------------------------------------------------------------------------------------------
+
+//Notificación de Toastify en el formulario
 nombreForm.addEventListener("submit", (e) => {
   e.preventDefault();
 
@@ -96,10 +135,10 @@ nombreForm.addEventListener("submit", (e) => {
   }
 
   localStorage.setItem("nombreUsuario", nombre);
+  mostrarNotificacion(`¡Bienvenido/a, ${nombre}!`, "#2ecc71");
   iniciarSimulador();
 });
 
-//Botones de categoría
 categoriasContainer.addEventListener("click", (e) => {
   if (e.target.classList.contains("categoria-btn")) {
     categoriaSeleccionada = e.target.dataset.categoria;
@@ -110,17 +149,28 @@ categoriasContainer.addEventListener("click", (e) => {
   }
 });
 
-//Botón de generar predicción
 generarBtn.addEventListener("click", generarYGuardarPrediccion);
 
-//Botón de limpiar historial
+//SweetAlert2 para la confirmación de limpieza de historial
 limpiarHistorialBtn.addEventListener("click", () => {
-  localStorage.removeItem("historialOraculo");
-  historialPredicciones = [];
-  renderizarHistorial();
+  mostrarAlertaConfirmacion(
+    "¿Estás seguro de que quieres limpiar el historial?",
+    "Esta acción no se puede deshacer.",
+    "warning"
+  ).then((result) => {
+    if (result.isConfirmed) {
+      localStorage.removeItem("historialOraculo");
+      historialPredicciones = [];
+      renderizarHistorial();
+      mostrarAlerta(
+        "¡Historial Borrado!",
+        "Tu historial de predicciones ha sido eliminado.",
+        "success"
+      );
+    }
+  });
 });
 
-//Botón de cambiar de nombre
 cambiarNombreBtn.addEventListener("click", () => {
   localStorage.removeItem("nombreUsuario");
   bienvenidaContainer.style.display = "block";
@@ -131,22 +181,7 @@ cambiarNombreBtn.addEventListener("click", () => {
     "<p>Aún no hay predicciones en tu historial.</p>";
 });
 
-//Iniciar el simulador
-const iniciarSimulador = () => {
-  const nombreUsuario = localStorage.getItem("nombreUsuario");
-  if (nombreUsuario) {
-    tituloBienvenida.textContent = `¡Hola, ${nombreUsuario}!`;
-    bienvenidaContainer.style.display = "none";
-    oraculoContainer.style.display = "block";
-    renderizarCategorias();
-    renderizarHistorial();
-    inicializarMensajePrediccion();
-    cargarRespuestasOraculo();
-  } else {
-    bienvenidaContainer.style.display = "block";
-    oraculoContainer.style.display = "none";
-  }
-};
-
-//Carga inicial de la página
-document.addEventListener("DOMContentLoaded", iniciarSimulador);
+document.addEventListener("DOMContentLoaded", () => {
+  cargarRespuestasOraculo();
+  iniciarSimulador();
+});
